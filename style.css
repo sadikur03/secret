@@ -27,15 +27,8 @@ body {
 }
 
 @keyframes float {
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0.5;
-    }
-
-    50% {
-        transform: translateY(-30px) rotate(20deg);
-        opacity: 0.9;
-    }
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
+    50% { transform: translateY(-30px) rotate(20deg); opacity: 0.9; }
 }
 
 /* Card Container */
@@ -74,12 +67,12 @@ body {
     transition: all 0.4s ease;
 }
 
-    .step-circle.active {
-        background: #ff3366;
-        color: #fff;
-        transform: scale(1.1);
-        box-shadow: 0 0 12px rgba(255, 51, 102, 0.4);
-    }
+.step-circle.active {
+    background: #ff3366;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(255, 51, 102, 0.4);
+}
 
 .step-line {
     height: 4px;
@@ -89,9 +82,9 @@ body {
     transition: all 0.4s ease;
 }
 
-    .step-line.active {
-        background: #ff3366;
-    }
+.step-line.active {
+    background: #ff3366;
+}
 
 /* Page Transitions */
 .page {
@@ -104,11 +97,11 @@ body {
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-    .page.active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-    }
+.page.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
 
 h1, h2 {
     color: #4a1525;
@@ -129,41 +122,18 @@ p.description {
     overflow: hidden;
     border: 4px solid #fff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-    .photo-holder:hover {
-        transform: scale(1.03);
-    }
-
-    .photo-holder img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-
-.photo-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 51, 102, 0.4);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    font-size: 0.9rem;
-    padding: 5px;
+.photo-holder:hover {
+    transform: scale(1.03);
 }
 
-.photo-holder:hover .photo-overlay {
-    opacity: 1;
+.photo-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .hero-photo {
@@ -185,9 +155,9 @@ p.description {
     height: 130px;
 }
 
-    .gallery-photo:nth-child(5) {
-        grid-column: span 2;
-    }
+.gallery-photo:nth-child(5) {
+    grid-column: span 2;
+}
 
 /* Love Letter */
 .love-letter {
@@ -203,21 +173,21 @@ p.description {
     font-size: 1.05rem;
 }
 
-    .love-letter .signature {
-        text-align: right;
-        font-weight: bold;
-        color: #ff3366;
-        margin-top: 10px;
-    }
+.love-letter .signature {
+    text-align: right;
+    font-weight: bold;
+    color: #ff3366;
+    margin-top: 10px;
+}
 
 /* Buttons & Interactive Elements */
 .btn-group {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    min-height: 80px;
+    min-height: 120px;
     width: 100%;
     position: relative;
 }
@@ -238,25 +208,32 @@ p.description {
     box-shadow: 0 5px 15px rgba(255, 51, 102, 0.3);
 }
 
-    .btn-next:hover {
-        background: #e02452;
-        transform: translateY(-2px);
-    }
+.btn-next:hover {
+    background: #e02452;
+    transform: translateY(-2px);
+}
 
 .btn-back {
     background: #e2e8f0;
     color: #475569;
 }
 
-    .btn-back:hover {
-        background: #cbd5e1;
-    }
+.btn-back:hover {
+    background: #cbd5e1;
+}
+
+#yes-btn {
+    position: relative;
+    z-index: 2;
+}
 
 #no-btn {
     position: absolute;
     background: #94a3b8;
     color: white;
     transition: all 0.2s ease;
+    z-index: 1;
+    right: 15%;
 }
 
 .success-box {
@@ -271,15 +248,8 @@ p.description {
 }
 
 @keyframes popup {
-    0% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 .btn-wrapper {

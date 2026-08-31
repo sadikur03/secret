@@ -16,7 +16,6 @@ body {
     position: relative;
 }
 
-/* Background Animated Elements */
 .bg-heart {
     position: absolute;
     color: rgba(255, 255, 255, 0.6);
@@ -31,7 +30,6 @@ body {
     50% { transform: translateY(-30px) rotate(20deg); opacity: 0.9; }
 }
 
-/* Card Container */
 .card-container {
     width: 100%;
     max-width: 650px;
@@ -45,7 +43,6 @@ body {
     z-index: 10;
 }
 
-/* Steps Indicator */
 .progress-bar {
     display: flex;
     justify-content: center;
@@ -86,7 +83,6 @@ body {
     background: #ff3366;
 }
 
-/* Page Transitions */
 .page {
     display: none;
     flex-direction: column;
@@ -115,7 +111,6 @@ p.description {
     margin-bottom: 20px;
 }
 
-/* Photo Frames */
 .photo-holder {
     position: relative;
     border-radius: 16px;
@@ -142,7 +137,6 @@ p.description {
     margin-bottom: 20px;
 }
 
-/* Gallery Grid */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -159,7 +153,6 @@ p.description {
     grid-column: span 2;
 }
 
-/* Love Letter */
 .love-letter {
     background: #fff;
     border-left: 5px solid #ff3366;
@@ -180,23 +173,22 @@ p.description {
     margin-top: 10px;
 }
 
-/* Buttons & Interactive Elements */
+/* 3 Buttons Styling */
 .btn-group {
     display: flex;
-    gap: 40px; /* Yes এবং No বাটনের মাঝে পর্যাপ্ত ফাঁকা জায়গা */
+    gap: 15px;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    min-height: 140px;
+    flex-wrap: wrap;
     width: 100%;
-    position: relative;
 }
 
 .btn {
-    padding: 12px 28px;
+    padding: 12px 24px;
     border: none;
     border-radius: 50px;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -222,29 +214,35 @@ p.description {
     background: #cbd5e1;
 }
 
-/* Yes & No Buttons Separated */
-#yes-btn {
-    position: relative;
-    z-index: 5;
-}
-
-#no-btn {
-    position: relative; /* শুরুতে পাশাপাশি থাকবে, মাউস আনলে সরে যাবে */
+.btn-no {
     background: #94a3b8;
     color: white;
-    transition: all 0.2s ease;
-    z-index: 10;
 }
 
-.success-box {
+.btn-no:hover {
+    background: #64748b;
+}
+
+/* Response Message Boxes */
+.message-box {
     display: none;
-    background: #d1fae5;
-    border: 2px solid #34d399;
-    color: #065f46;
     padding: 20px;
     border-radius: 16px;
     margin-top: 20px;
     animation: popup 0.5s ease-out;
+    width: 100%;
+}
+
+.success-box {
+    background: #d1fae5;
+    border: 2px solid #34d399;
+    color: #065f46;
+}
+
+.sad-box {
+    background: #ffe4e6;
+    border: 2px solid #fda4af;
+    color: #9f1239;
 }
 
 @keyframes popup {

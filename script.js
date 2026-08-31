@@ -26,19 +26,7 @@ function nextPage(pageNum) {
     }
 }
 
-// Photo Upload Preview
-function previewPhoto(event, targetImgId) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            document.getElementById(targetImgId).src = e.target.result;
-        }
-        reader.readAsDataURL(file);
-    }
-}
-
-// Dodging "No" Button
+// Dodging "No" Button Logic
 function escapeNoButton() {
     const noBtn = document.getElementById('no-btn');
     const container = document.getElementById('btn-group-box');
@@ -52,6 +40,7 @@ function escapeNoButton() {
     const randomX = Math.random() * (maxX - 10);
     const randomY = Math.random() * (maxY - 10);
 
+    noBtn.style.right = 'auto';
     noBtn.style.left = `${Math.max(5, randomX)}px`;
     noBtn.style.top = `${Math.max(5, randomY)}px`;
 }

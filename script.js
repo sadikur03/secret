@@ -40,9 +40,10 @@ function escapeNoButton() {
     const randomX = Math.random() * (maxX - 10);
     const randomY = Math.random() * (maxY - 10);
 
-    noBtn.style.right = 'auto';
-    noBtn.style.left = `${Math.max(5, randomX)}px`;
-    noBtn.style.top = `${Math.max(5, randomY)}px`;
+    // প্রথমবার টাচ করলেই বাটন Absolute হয়ে ফাঁকা জায়গায় চলে যাবে
+    noBtn.style.position = 'absolute';
+    noBtn.style.left = `${Math.max(10, randomX)}px`;
+    noBtn.style.top = `${Math.max(10, randomY)}px`;
 }
 
 // Accept Button Click

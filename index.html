@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Background Decor -->
+    <div class="bg-heart" style="top: 10%; left: 10%;">❤️</div>
+    <div class="bg-heart" style="top: 20%; right: 15%; animation-delay: 1s;">💖</div>
+    <div class="bg-heart" style="bottom: 15%; left: 12%; animation-delay: 2s;">💕</div>
+    <div class="bg-heart" style="bottom: 20%; right: 10%; animation-delay: 3s;">💗</div>
+
+    <!-- Main Card Container -->
+    <div class="card-container">
+        
+        <!-- Progress Steps -->
+        <div class="progress-bar">
+            <div id="step-1" class="step-circle active">1</div>
+            <div id="line-1" class="step-line"></div>
+            <div id="step-2" class="step-circle">2</div>
+            <div id="line-2" class="step-line"></div>
+            <div id="step-3" class="step-circle">3</div>
+            <div id="line-3" class="step-line"></div>
+            <div id="step-4" class="step-circle">4</div>
+        </div>
+
+        <!-- PAGE 1: COVER & 1 PIC -->
+        <div id="page-1" class="page active">
+            <h1>You Are The Best Part Of My Life ❤️</h1>
+            
+            <div class="photo-holder hero-photo">
+                <img id="img-1" src="1.jpg" alt="Cover Pic">
+            </div>
+
+            <p class="description">On this special day, I want to share a few words straight from my heart...</p>
+            <button class="btn btn-next" onclick="nextPage(2)">Next Page ➔</button>
+        </div>
+
+        <!-- PAGE 2: 5 PICS GALLERY -->
+        <div id="page-2" class="page">
+            <h2>Our Beautiful Moments 📸</h2>
+
+            <div class="gallery-grid">
+                <div class="photo-holder gallery-photo">
+                    <img id="img-2-1" src="2.jpg" alt="Photo 1">
+                </div>
+                <div class="photo-holder gallery-photo">
+                    <img id="img-2-2" src="3.jpg" alt="Photo 2">
+                </div>
+                <div class="photo-holder gallery-photo">
+                    <img id="img-2-3" src="4.jpg" alt="Photo 3">
+                </div>
+                <div class="photo-holder gallery-photo">
+                    <img id="img-2-4" src="5.jpg" alt="Photo 4">
+                </div>
+                <div class="photo-holder gallery-photo">
+                    <img id="img-2-5" src="6.jpg" alt="Photo 5">
+                </div>
+            </div>
+
+            <div class="btn-wrapper">
+                <button class="btn btn-back" onclick="nextPage(1)">Back</button>
+                <button class="btn btn-next" onclick="nextPage(3)">Next ➔</button>
+            </div>
+        </div>
+
+        <!-- PAGE 3: LOVE LETTER -->
+        <div id="page-3" class="page">
+            <h2>My Heartfelt Letter 💌</h2>
+            
+            <div class="love-letter">
+                <p>Dearest,</p>
+                <p>Your beautiful smile instantly wipes away all the stress and tiredness of my day. Every single moment spent with you is the greatest gift of my life.</p>
+                <p>I want to walk beside you in every step of this journey, holding your hand through all the joy and sorrow life brings.</p>
+                <p class="signature">— With all my love, Always Yours 💕</p>
+            </div>
+
+            <div class="btn-wrapper">
+                <button class="btn btn-back" onclick="nextPage(2)">Back</button>
+                <button class="btn btn-next" onclick="nextPage(4)">Final Surprise ➔</button>
+            </div>
+        </div>
+
+        <!-- PAGE 4: PROPOSAL -->
+        <div id="page-4" class="page">
+            <h1 style="font-size: 2rem; color: #ff3366;">Will You Be Mine Forever? 💍</h1>
+            <p class="description">Will you hold my hand and share all my dreams and happiness for a lifetime?</p>
+
+            <div class="btn-group" id="btn-group-box">
+                <button class="btn btn-next" id="yes-btn" onclick="acceptProposal()">Yes, Of Course! ❤️</button>
+                <button class="btn" id="no-btn" onmouseover="escapeNoButton()" onclick="escapeNoButton()">No 😜</button>
+            </div>
+
+            <div id="success-box" class="success-box">
+                <h2>I Knew You Would Say Yes! 🎉💖</h2>
+                <p>Thank you for making my life so beautiful and meaningful! I love you so much! ✨</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

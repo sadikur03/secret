@@ -183,11 +183,11 @@ p.description {
 /* Buttons & Interactive Elements */
 .btn-group {
     display: flex;
-    gap: 20px;
+    gap: 40px; /* Yes এবং No বাটনের মাঝে পর্যাপ্ত ফাঁকা জায়গা */
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    min-height: 120px;
+    min-height: 140px;
     width: 100%;
     position: relative;
 }
@@ -222,18 +222,18 @@ p.description {
     background: #cbd5e1;
 }
 
+/* Yes & No Buttons Separated */
 #yes-btn {
     position: relative;
-    z-index: 2;
+    z-index: 5;
 }
 
 #no-btn {
-    position: absolute;
+    position: relative; /* শুরুতে পাশাপাশি থাকবে, মাউস আনলে সরে যাবে */
     background: #94a3b8;
     color: white;
     transition: all 0.2s ease;
-    z-index: 1;
-    right: 15%;
+    z-index: 10;
 }
 
 .success-box {

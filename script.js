@@ -1,12 +1,18 @@
 let currentPage = 1;
 
-// Page Navigation
+// Regular Page Navigation (Pages 1 to 4)
 function nextPage(pageNum) {
-    document.getElementById(`page-${currentPage}`).classList.remove('active');
+    // Hide all pages
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(p => p.classList.remove('active'));
     
+    // Show step progress bar
+    document.getElementById('progress-bar').style.display = 'flex';
+
     currentPage = pageNum;
     document.getElementById(`page-${currentPage}`).classList.add('active');
 
+    // Step Node Color Logic
     for (let i = 1; i <= 4; i++) {
         const step = document.getElementById(`step-${i}`);
         if (i <= currentPage) {
@@ -26,22 +32,13 @@ function nextPage(pageNum) {
     }
 }
 
-// Accept Button Click (Yes)
-function acceptProposal() {
-    document.getElementById('btn-group-box').style.display = 'none';
-    document.getElementById('sad-box').style.display = 'none';
-    document.getElementById('success-box').style.display = 'block';
-}
+// Redirect to Separate Response Pages (Yes / No)
+function goToResponsePage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(p => p.classList.remove('active'));
 
-// Reject Button Click (No)
-function rejectProposal() {
-    document.getElementById('btn-group-box').style.display = 'none';
-    document.getElementById('success-box').style.display = 'none';
-    document.getElementById('sad-box').style.display = 'block';
-}
+    // Hide progress bar for standalone response pages
+    document.getElementById('progress-bar').style.display = 'none';
 
-// Reset Options when clicking "Think Again"
-function resetChoice() {
-    document.getElementById('sad-box').style.display = 'none';
-    document.getElementById('btn-group-box').style.display = 'flex';
+    document.getElementById(pageId).classList.add('active');
 }

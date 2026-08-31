@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- Background Decor -->
+    <!-- Floating Background Elements -->
     <div class="bg-heart" style="top: 10%; left: 10%;">❤️</div>
     <div class="bg-heart" style="top: 20%; right: 15%; animation-delay: 1s;">💖</div>
     <div class="bg-heart" style="bottom: 15%; left: 12%; animation-delay: 2s;">💕</div>
@@ -17,7 +17,7 @@
     <!-- Main Card Container -->
     <div class="card-container">
         
-        <!-- Progress Steps -->
+        <!-- Progress Steps Bar -->
         <div class="progress-bar" id="progress-bar">
             <div id="step-1" class="step-circle active">1</div>
             <div id="line-1" class="step-line"></div>
@@ -28,7 +28,7 @@
             <div id="step-4" class="step-circle">4</div>
         </div>
 
-        <!-- PAGE 1 -->
+        <!-- PAGE 1: COVER -->
         <div id="page-1" class="page active">
             <h1>You Are The Best Part Of My Life ❤️</h1>
             <div class="photo-holder hero-photo">
@@ -38,7 +38,7 @@
             <button class="btn btn-next" onclick="nextPage(2)">Next Page ➔</button>
         </div>
 
-        <!-- PAGE 2 -->
+        <!-- PAGE 2: GALLERY -->
         <div id="page-2" class="page">
             <h2>Our Beautiful Moments 📸</h2>
             <div class="gallery-grid">
@@ -54,7 +54,7 @@
             </div>
         </div>
 
-        <!-- PAGE 3 -->
+        <!-- PAGE 3: LOVE LETTER -->
         <div id="page-3" class="page">
             <h2>My Heartfelt Letter 💌</h2>
             <div class="love-letter">
@@ -69,31 +69,31 @@
             </div>
         </div>
 
-        <!-- PAGE 4: PROPOSAL -->
+        <!-- PAGE 4: PROPOSAL BUTTONS -->
         <div id="page-4" class="page">
             <h1 style="font-size: 2rem; color: #ff3366;">Will You Be Mine Forever? 💍</h1>
             <p class="description">Will you hold my hand and share all my dreams and happiness for a lifetime?</p>
 
             <div class="btn-group">
                 <button class="btn btn-back" onclick="nextPage(3)">Back</button>
-                <button class="btn btn-next" onclick="goToResponsePage('page-yes')">Yes, Of Course! ❤️</button>
-                <button class="btn btn-no" onclick="goToResponsePage('page-no')">No 😜</button>
+                <button class="btn btn-next" id="yes-btn" onclick="showYesMessage()">Yes, Of Course! ❤️</button>
+                <button class="btn btn-no" id="no-btn" onclick="showNoMessage()">No 😜</button>
             </div>
         </div>
 
-        <!-- PAGE 5: SEPARATE YES PAGE -->
+        <!-- PAGE 5: YES RESPONSE PAGE -->
         <div id="page-yes" class="page">
             <h1 style="font-size: 2.2rem; color: #059669;">I Knew You Would Say Yes! 🎉💖</h1>
-            <p class="description" style="font-size: 1.1rem; color: #065f46; margin: 20px 0;">
-                Thank you for making my life so beautiful and meaningful! I love you so much forever and always! ✨❤️
+            <p class="description" style="font-size: 1.15rem; color: #065f46; margin: 25px 0; line-height: 1.8;">
+                Thank you for making my life so beautiful and meaningful! I love you so much, forever and always! ✨❤️
             </p>
-            <button class="btn btn-back" onclick="nextPage(4)">➔ Back to Proposal</button>
+            <button class="btn btn-next" onclick="nextPage(4)">➔ Back to Proposal</button>
         </div>
 
-        <!-- PAGE 6: SEPARATE NO PAGE -->
+        <!-- PAGE 6: NO RESPONSE PAGE -->
         <div id="page-no" class="page">
             <h1 style="font-size: 2rem; color: #e11d48;">Oh no... My heart is broken! 🥺💔</h1>
-            <p class="description" style="font-size: 1.1rem; color: #9f1239; margin: 20px 0;">
+            <p class="description" style="font-size: 1.15rem; color: #9f1239; margin: 25px 0; line-height: 1.8;">
                 Are you sure? Please think again... I will always be waiting for your Yes! 😢
             </p>
             <button class="btn btn-next" onclick="nextPage(4)">Think Again ❤️</button>

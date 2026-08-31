@@ -173,10 +173,9 @@ p.description {
     margin-top: 10px;
 }
 
-/* Button Alignment Fixes */
 .btn-group, .btn-wrapper {
     display: flex;
-    gap: 12px;
+    gap: 15px;
     justify-content: center;
     align-items: center;
     margin-top: 25px;
@@ -215,10 +214,10 @@ p.description {
 }
 
 .btn-no {
-    background: #94a3b8;
-    color: white;
+    background: #e2e8f0;
+    color: #334155;
 }
 
 .btn-no:hover {
-    background: #64748b;
+    background: #cbd5e1;
 }

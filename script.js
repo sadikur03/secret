@@ -26,28 +26,22 @@ function nextPage(pageNum) {
     }
 }
 
-// Dodging "No" Button Logic
-function escapeNoButton() {
-    const noBtn = document.getElementById('no-btn');
-    const container = document.getElementById('btn-group-box');
-    
-    const containerRect = container.getBoundingClientRect();
-    const btnRect = noBtn.getBoundingClientRect();
-
-    const maxX = containerRect.width - btnRect.width;
-    const maxY = containerRect.height - btnRect.height;
-
-    const randomX = Math.random() * (maxX - 10);
-    const randomY = Math.random() * (maxY - 10);
-
-    // প্রথমবার টাচ করলেই বাটন Absolute হয়ে ফাঁকা জায়গায় চলে যাবে
-    noBtn.style.position = 'absolute';
-    noBtn.style.left = `${Math.max(10, randomX)}px`;
-    noBtn.style.top = `${Math.max(10, randomY)}px`;
-}
-
-// Accept Button Click
+// Accept Button Click (Yes)
 function acceptProposal() {
     document.getElementById('btn-group-box').style.display = 'none';
+    document.getElementById('sad-box').style.display = 'none';
     document.getElementById('success-box').style.display = 'block';
+}
+
+// Reject Button Click (No)
+function rejectProposal() {
+    document.getElementById('btn-group-box').style.display = 'none';
+    document.getElementById('success-box').style.display = 'none';
+    document.getElementById('sad-box').style.display = 'block';
+}
+
+// Reset Options when clicking "Think Again"
+function resetChoice() {
+    document.getElementById('sad-box').style.display = 'none';
+    document.getElementById('btn-group-box').style.display = 'flex';
 }
